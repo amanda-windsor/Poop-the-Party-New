@@ -18,11 +18,20 @@ EditorBuildSettings:
     path: Assets/Scenes 1/BouncyParty.unity
     guid: ace4effab9288224da57743453adff2d
   - enabled: 1
-    path: Assets/Scenes 1/FancyParty.unity
-    guid: 3e16c83dce15c4a4ebc18d7ff4e2fbde
+    path: Assets/Scenes 1/LevelSummary1.unity
+    guid: 3ea8774156a28e846bf82e85b251f87c
+  - enabled: 1
+    path: Assets/Scenes 1/RaveParty.unity
+    guid: a17b06bb9f2e51f449823d53f26ccdb5
   - enabled: 1
     path: Assets/Scenes 1/LevelSummary.unity
     guid: 5d8dbc89fc124b14ca7df84486c1cff3
+  - enabled: 1
+    path: Assets/Scenes 1/FancyParty.unity
+    guid: 3e16c83dce15c4a4ebc18d7ff4e2fbde
+  - enabled: 1
+    path: Assets/Scenes 1/LevelSummary2.unity
+    guid: 1a7742fac8aa8924ab2a875e21a2a2c5
   - enabled: 1
     path: Assets/Scenes 1/Tutorial.unity
     guid: 500495bdaee978d40b038e6fe6eec286

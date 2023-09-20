@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using System.Globalization;
 
 [AddComponentMenu("")]
 public class UIScript : MonoBehaviour
@@ -24,13 +25,13 @@ public class UIScript : MonoBehaviour
 	public Transform inventory;
 	public GameObject resourceItemPrefab;
 
-
 	// Internal variables to keep track of score, health, and resources, win state
 	private int[] scores = new int[2];
 	private int[] playersHealth = new int[2];
 	private Dictionary<int, ResourceStruct> resourcesDict = new Dictionary<int, ResourceStruct>(); //holds a reference to all the resources collected, and to their UI
     private bool gameOver = false; //this gets changed when the game is won OR lost
 
+	
 
 	private void Start()
 	{
@@ -69,7 +70,9 @@ public class UIScript : MonoBehaviour
 	public void AddPoints(int playerNumber, int amount = 1)
 	{
 		scores[playerNumber] += amount;
-
+		
+		MainManager.Instance.ScoreRunningTotal = scores[playerNumber]; // Added by Amanda to track score running total and save between scenes
+		MainManager.Instance.scoreRunningTotalLabel.text = scores[playerNumber].ToString();
 		if(numberOfPlayers == Players.OnePlayer)
 		{
 			numberLabels[1].text = scores[playerNumber].ToString(); //with one player, the score is on the right
@@ -86,8 +89,8 @@ public class UIScript : MonoBehaviour
 		}
 	}
 
-	//currently unused by other Playground scripts
-	public void RemoveOnePoint(int playerNumber)
+    //currently unused by other Playground scripts
+    public void RemoveOnePoint(int playerNumber)
 	{
 		scores[playerNumber]--;
 
