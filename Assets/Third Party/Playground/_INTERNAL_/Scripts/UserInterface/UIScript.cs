@@ -15,7 +15,6 @@ public class UIScript : MonoBehaviour
 	// If the scoreToWin is -1, the game becomes endless (no win conditions, but you could do game over)
 	public int scoreToWin = -1;
 
-
 	[Header("References (don't touch)")]
 	//Right is used for the score in P1 games
 	public Text[] numberLabels = new Text[2];
@@ -65,7 +64,6 @@ public class UIScript : MonoBehaviour
 	{
 		AddPoints(playerNumber, 1);
 	}
-
 
 	public void AddPoints(int playerNumber, int amount = 1)
 	{

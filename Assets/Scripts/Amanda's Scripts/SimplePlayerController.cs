@@ -14,6 +14,8 @@ namespace ClearSky
         private int direction = 1;
         bool isJumping = false;
         private bool alive = true;
+        [SerializeField] private AudioSource jumpSoundEffect;
+        [SerializeField] private AudioSource attackSoundEffect;
 
 
         // Start is called before the first frame update
@@ -75,6 +77,7 @@ namespace ClearSky
             if ((Input.GetButtonDown("Jump") || Input.GetAxisRaw("Vertical") > 0)
             && !anim.GetBool("isJump"))
             {
+                jumpSoundEffect.Play();
                 isJumping = true;
                 anim.SetBool("isJump", true);
             }
@@ -94,14 +97,17 @@ namespace ClearSky
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+                attackSoundEffect.Play();
                 anim.SetTrigger("attack");
             }
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
+                attackSoundEffect.Play();
                 anim.SetTrigger("attack");
             }
             if (Input.GetKeyDown(KeyCode.Keypad1))
             {
+                attackSoundEffect.Play();
                 anim.SetTrigger("attack");
             }
         }

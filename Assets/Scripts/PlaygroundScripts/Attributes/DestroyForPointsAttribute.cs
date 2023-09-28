@@ -10,7 +10,7 @@ public class DestroyForPointsAttribute : MonoBehaviour
 	public int health = 20;
 	public int pointsWorth = 1;
     public GameObject deathEffectPrefab;
-	
+
 
     private UIScript userInterface;
 
@@ -55,12 +55,13 @@ public class DestroyForPointsAttribute : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collisionData)
 	{
 
+
 			// is the other object a Bullet?
 			if (collisionData.gameObject.CompareTag("Bullet"))
 			{
+            
 
-
-				if (userInterface != null)
+            if (userInterface != null)
 				{
 					// add one point
 					BulletAttribute b = collisionData.gameObject.GetComponent<BulletAttribute>();

@@ -10,6 +10,9 @@ TagManager:
   - Background
   - Weapon
   - Bullet
+  - Damage
+  - Balloon
+  - Present
   layers:
   - Default
   - TransparentFX
