@@ -12,7 +12,7 @@ public class UIScript : MonoBehaviour
 
 	public GameType gameType = GameType.Score;
 
-	// If the scoreToWin is -1, the game becomes endless (no win conditions, but you could do game over)
+	// If the scoreToWin is -1, the game becomes endless (no win conditions, but you could do game over) 
 	public int scoreToWin = -1;
 
 	[Header("References (don't touch)")]
